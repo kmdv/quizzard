@@ -7,7 +7,7 @@ class Config
 	const DB_PASSWORD = "walkiria";
 	const DB_NAME = "quizzard";
 
-	const HOME_CONTENTS = "contents/quiz.php";
+	const HOME_CONTENTS = "contents/quiz_list.php";
 
     // Explicit table of allowed contents prevents from executing malicious scripts.
 	public static $contentFiles = array(
@@ -15,6 +15,7 @@ class Config
         "quiz_wizard" => "contents/quiz_wizard.php",
         "quiz_list" => "contents/quiz_list.php",
         "quiz_save" => "contents/quiz_save.php",
+        "about" => "contents/about.php",
         "submit_answers" => "contents/submit_answers.php");
 }
 

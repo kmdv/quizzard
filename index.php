@@ -15,43 +15,31 @@
 </head>
 <body>
 
-<div class="main">
-<?php
-
-require_once("config.php");
-
-date_default_timezone_set("Poland");
-
-if (IsContentFileSpecified() && IsContentFileValid())
-{
-    include(GetContentFileName());
-}
-else
-{
-    include(GetDefaultContentFileName());
-}
-
-function IsContentFileSpecified()
-{
-    return !empty($_GET["show"]);
-}
-
-function IsContentFileValid()
-{
-    return array_key_exists($_GET["show"], Config::$contentFiles);
-}
-
-function GetContentFileName()
-{
-    return Config::$contentFiles[$_GET["show"]];
-}
-
-function GetDefaultContentFileName()
-{
-    return Config::HOME_CONTENTS;
-}
-
-?>
+<div class="page-wrapper">
+    <div class="banner-wrapper with-horizontal-separator">
+        <img src="banner.png" />
+    </div>
+    <div class="menu-wrapper with-horizontal-separator">
+        <!--<div class="menu-item-wrapper with-vertical-separator">
+            <a href="index.php?show=quiz_list">Quiz list</a>
+        </div><div class="menu-item-wrapper with-vertical-separator">
+            <a href="index.php?show=quiz_list">Quiz list 2</a>
+        </div>-->
+        <div class="menu-item-wrapper">
+            <a href="index.php?show=quiz_list">Lista quizów</a>
+        </div><div class="menu-item-wrapper">
+            <a href="index.php?show=quiz_wizard">Dodaj nowy quiz</a>
+        </div><div class="menu-item-wrapper">
+            <a href="index.php?show=about">O projekcie</a>
+        </div>
+    </div>
+    <div class="content-wrapper with-horizontal-separator">
+        <?php include('content.php'); ?>
+    </div>
+    <div class="footer-wrapper with-horizontal-separator">
+        Copyright (c) 2013-2014 by Quizzard Team
+    </div>
+</div>
 
 </body>
 </html>

@@ -1,6 +1,3 @@
-<a href="index.php?show=quiz_list">Pokaz listę quizów</a><br />
-<a href="index.php?show=quiz_wizard">Dodaj nowy quiz</a><br />
-
 <?php
 
 require_once("dbconnector/db_quiz_loader.php");
@@ -19,10 +16,6 @@ use Quizzard\DbQuizLoader;
 use Quizzard\DefaultDbConnector;
 
 $dateTime = \DateTime::createFromFormat("Y-m-d H:i", "2009-02-15 15:16");
-if (!($dateTime instanceof \DateTime))
-{
-    echo 'CO TO KURWA MA BYĆ?!<br />';
-}
 
 $question1 = new Question(
     "Jaki kolor?",
