@@ -58,18 +58,12 @@ div.authors {
     margin-left: 2em;
 }
 
-a:link {
-    color: #00A2FF;
-    text-decoration: none
-}
-
-a:visited {
-    color: #9932CC;
-    text-decoration: none
+a {
+    color: #804060;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #00CED1;
-    background-color: #FFE4C4;
+    color: #B06090;
     text-decoration: underline;
 }
