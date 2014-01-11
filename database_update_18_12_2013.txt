@@ -1,0 +1,6 @@
+ALTER TABLE `submissions` ADD COLUMN `completionDateTime` DATETIME NOT NULL;
+ALTER TABLE SubmittedAnswers DROP FOREIGN KEY fk_SubmittedAnswers_Submissions1;
+ALTER TABLE Submissions MODIFY COLUMN `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE SubmittedAnswers ADD CONSTRAINT fk_SubmittedAnswers_Submissions1 FOREIGN KEY (submissionID) REFERENCES Submissions(id);
+ALTER TABLE `SubmittedAnswers` CHANGE `id` `id` INT( 11 ) NOT NULL AUTO_INCREMENT ;
+
